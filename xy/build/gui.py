@@ -20,15 +20,15 @@ def relative_to_assets(path: str) -> Path:
 
 window = Tk()
 
-window.geometry("490x305")
+window.geometry("300x175")
 window.configure(bg = "#FFFFFF")
 
 
 canvas = Canvas(
     window,
     bg = "#FFFFFF",
-    height = 305,
-    width = 490,
+    height = 175,
+    width = 300,
     bd = 0,
     highlightthickness = 0,
     relief = "ridge"
@@ -36,49 +36,93 @@ canvas = Canvas(
 
 canvas.place(x = 0, y = 0)
 canvas.create_rectangle(
-    0.0,
-    0.0,
-    490.0,
-    305.0,
+    7.105427357601002e-14,
+    25.0,
+    300.00000000000006,
+    175.0,
     fill="#212121",
     outline="")
 
 entry_image_1 = PhotoImage(
     file=relative_to_assets("entry_1.png"))
 entry_bg_1 = canvas.create_image(
-    73.5,
-    111.5,
+    44.999999999999986,
+    82.5,
     image=entry_image_1
 )
 entry_1 = Entry(
     bd=0,
-    bg="#FFFFFF",
+    bg="#D9D9D9",
     highlightthickness=0
 )
 entry_1.place(
-    x=49.0,
-    y=100.0,
-    width=49.0,
-    height=21.0
+    x=29.999999999999986,
+    y=75.0,
+    width=30.0,
+    height=13.0
 )
 
 entry_image_2 = PhotoImage(
     file=relative_to_assets("entry_2.png"))
 entry_bg_2 = canvas.create_image(
-    172.5,
-    111.5,
+    104.99999999999999,
+    82.5,
     image=entry_image_2
 )
 entry_2 = Entry(
     bd=0,
-    bg="#FFFFFF",
+    bg="#D9D9D9",
     highlightthickness=0
 )
 entry_2.place(
-    x=148.0,
-    y=100.0,
-    width=49.0,
-    height=21.0
+    x=89.99999999999999,
+    y=75.0,
+    width=30.0,
+    height=13.0
+)
+
+canvas.create_text(
+    14.999999999999986,
+    30.0,
+    anchor="nw",
+    text="Translation Overlay",
+    fill="#ABABAB",
+    font=("Inter SemiBold", 12 * -1)
+)
+
+canvas.create_rectangle(
+    1.4210854715202004e-14,
+    0.0,
+    300.0,
+    25.0,
+    fill="#D9D9D9",
+    outline="")
+
+canvas.create_text(
+    14.999999999999986,
+    5.0,
+    anchor="nw",
+    text="Control",
+    fill="#212121",
+    font=("Inter SemiBold", 14 * -1)
+)
+
+canvas.create_text(
+    14.999999999999986,
+    75.0,
+    anchor="nw",
+    text="X:",
+    fill="#ABABAB",
+    font=("Inter Regular", 12 * -1)
+)
+
+canvas.create_text(
+    74.99999999999999,
+    75.0,
+    anchor="nw",
+    text="Y:",
+    fill="#ABABAB",
+    font=("Inter Regular", 12 * -1)
 )
 
 button_image_1 = PhotoImage(
@@ -91,37 +135,10 @@ button_1 = Button(
     relief="flat"
 )
 button_1.place(
-    x=375.0,
-    y=248.0,
-    width=98.0,
-    height=40.0
-)
-
-canvas.create_text(
-    21.0,
-    12.0,
-    anchor="nw",
-    text="Translation Overlay",
-    fill="#ABABAB",
-    font=("Inter SemiBold", 20 * -1)
-)
-
-canvas.create_text(
-    28.0,
-    100.0,
-    anchor="nw",
-    text="X",
-    fill="#ABABAB",
-    font=("Inter Regular", 16 * -1)
-)
-
-canvas.create_text(
-    127.0,
-    100.0,
-    anchor="nw",
-    text="Y",
-    fill="#ABABAB",
-    font=("Inter Regular", 16 * -1)
+    x=165.0,
+    y=30.0,
+    width=50.0,
+    height=20.0
 )
 
 button_image_2 = PhotoImage(
@@ -134,10 +151,10 @@ button_2 = Button(
     relief="flat"
 )
 button_2.place(
-    x=289.0,
-    y=16.0,
-    width=70.0,
-    height=28.0
+    x=215.0,
+    y=30.0,
+    width=50.0,
+    height=20.0
 )
 
 button_image_3 = PhotoImage(
@@ -150,10 +167,10 @@ button_3 = Button(
     relief="flat"
 )
 button_3.place(
-    x=359.0,
-    y=16.0,
-    width=80.0,
-    height=28.0
+    x=205.0,
+    y=75.0,
+    width=20.0,
+    height=20.0
 )
 
 button_image_4 = PhotoImage(
@@ -166,10 +183,10 @@ button_4 = Button(
     relief="flat"
 )
 button_4.place(
-    x=385.0,
-    y=117.0,
-    width=39.0,
-    height=39.0
+    x=225.0,
+    y=95.0,
+    width=20.0,
+    height=20.0
 )
 
 button_image_5 = PhotoImage(
@@ -182,10 +199,10 @@ button_5 = Button(
     relief="flat"
 )
 button_5.place(
-    x=305.0,
-    y=117.0,
-    width=39.0,
-    height=39.0
+    x=205.0,
+    y=115.0,
+    width=20.0,
+    height=20.0
 )
 
 button_image_6 = PhotoImage(
@@ -198,26 +215,10 @@ button_6 = Button(
     relief="flat"
 )
 button_6.place(
-    x=346.0,
-    y=81.0,
-    width=39.0,
-    height=39.0
-)
-
-button_image_7 = PhotoImage(
-    file=relative_to_assets("button_7.png"))
-button_7 = Button(
-    image=button_image_7,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_7 clicked"),
-    relief="flat"
-)
-button_7.place(
-    x=346.0,
-    y=157.0,
-    width=39.0,
-    height=39.0
+    x=185.0,
+    y=95.0,
+    width=20.0,
+    height=20.0
 )
 window.resizable(False, False)
 window.mainloop()
